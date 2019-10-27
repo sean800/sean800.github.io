@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <head>
-    <script type="text/javascript">
-   var phoneWidth = parseInt(window.screen.width);
-   var phoneScale = phoneWidth/640;
-   var ua = navigator.userAgent;
-   if (/Android (\d+\.\d+)/.test(ua)){
-     var version = parseFloat(RegExp.$1);
-     if(version>2.3){
-       document.write(‘<meta name="viewport" content="width=640, minimum-scale = ‘+phoneScale+‘, maximum-scale = ‘+phoneScale+‘, target-densitydpi=device-dpi">‘);
-     }else{
-       document.write(‘<meta name="viewport" content="width=640, target-densitydpi=device-dpi">‘);
-     }
-   } else {
-     document.write(‘<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">‘);
-   }
- </script>
+    @media only screen and (max-width: 1080px) {
+html, body {
+font-size: 16.875px;
+}
+}
+@media only screen and (max-width: 960px) {
+html, body {
+font-size: 15px;
+}
+}
+@media only screen and (max-width: 800px) {
+html, body {
+font-size: 12.5px;
+}
+}
+@media only screen and (max-width: 720px) {
+html, body {
+font-size: 11.25px;
+}
+}
+@media only screen and (max-width: 640px) {
+html, body {
+font-size: 10px;
+}
+}
     <link rel="shortcut icon" href="img/fav.png">
     <meta name="author" content="yuemingshudian">
     <meta charset="UTF-8">
